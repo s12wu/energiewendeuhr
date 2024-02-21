@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.gnome.Energiewende.SearchProvider
+Exec=/usr/lib/energiewende_search_provider/search_provider.py
+SystemdService=org.gnome.Energiewende.SearchProvider.service
