@@ -1,7 +1,0 @@
-[Unit]
-Description=GNOME Shell search provider showing the Energiewendeuhr status
-
-[Service]
-Type=dbus
-BusName=org.gnome.Energiewende.SearchProvider
-ExecStart=python3 /usr/lib/energiewende_search_provider/search_provider.py

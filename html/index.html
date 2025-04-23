@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Energiewendeuhr</title>
+<style>
+:root {
+  color-scheme: light dark;
+}
+</style>
+</head>
+<body>
+<h1>Energiewendeuhr</h1>
+<img id="energiewende-image"
+     src="/ew.php?t=classic_light"
+     data-light="/ew.php?t=classic_light"
+     data-dark="/ew.php?t=classic_dark"
+     alt="Energiewendeuhr">
+     
+     
+<script>
+  function updateImageBasedOnTheme() {
+    const image = document.getElementById('energiewende-image');
+    const lightSrc = image.dataset.light;
+    const darkSrc = image.dataset.dark;
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      image.src = darkSrc;
+    } else {
+      image.src = lightSrc;
+    }
+  }
+
+  updateImageBasedOnTheme();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateImageBasedOnTheme);
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', updateImageBasedOnTheme);
+</script>
+</body>
