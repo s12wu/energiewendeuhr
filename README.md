@@ -1,6 +1,6 @@
 # Waiblinger Energiewendeuhr
 
-Ein Rewrite der Energiewendeuhr
+Ein Rewrite der Energiewendeuhr. Zu finden unter https://energiewendeuhr.de/
 
 Ziel:
  - Verschiedene Grafiken und Rohdaten-Formate durch Templates: Sei es ein SVG-Bild oder nur rohe Messwerte
@@ -28,7 +28,7 @@ Installationsnotizen: (Könnte man das schöner machen? Reproduzierbarer!? Mit C
 sudo apt install gpg curl git python-is-python3 python3-pip python3-dotenv
 curl https://repos.influxdata.com/influxdata-archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdb.list
-sudo apt install influxdb2
+sudo apt update; sudo apt install influxdb2
 sudo systemctl unmask influxdb
 sudo systemctl enable influxdb
 
@@ -61,4 +61,9 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo chown -R user:user /var/www/html # ist sowas eigentlich akzeptabel?
 cd /var/www/html
 composer require influxdata/influxdb-client-php guzzlehttp/guzzle
+
+sudo apt install cron
+# systemctl enable und start
+crontab -e
+0 20 * * * /home/user/get_data.py
 ```
