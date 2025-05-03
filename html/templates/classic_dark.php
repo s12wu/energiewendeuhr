@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <?php
@@ -8,7 +9,7 @@ $state_colors = ["#000000", "#dd0000", "#ff8e00", "#ffff00", "#00bb00"];
 $colors = array_map(fn($num) => $state_colors[$num], $colorNumbers);
 
 // colors of the sunrays. Initially, all are gray, then we set as many as required to yellow.
-$sun_colors = ["#c6c6c6","#c6c6c6","#c6c6c6","#c6c6c6","#c6c6c6","#c6c6c6","#c6c6c6"];
+$sun_colors = ["#323232","#323232","#323232","#323232","#323232","#323232","#323232"];
 for ($i = 0; $i < 7; $i+=1) {
     if ($sun_fraction >= (($i+1) / 10.0)){
         $sun_colors[$i] = "#eebe00";  // yellow
@@ -16,7 +17,7 @@ for ($i = 0; $i < 7; $i+=1) {
 }
 
 // the wind turbines are duplicates in the svg source (<use>), so we can't use indivitual colors. Instead, we set their opacity to make them gray.
-$wind_opacities = ["0.4","0.4","0.4","0.4","0.4","0.4","0.4"]; // grayed out
+$wind_opacities = ["0.15","0.15","0.15","0.15","0.15","0.15","0.15"]; // grayed out
 for ($i = 0; $i < 7; $i+=1) {
     if ($wind_fraction >= (($i+1) / 10.0)){
         $wind_opacities[$i] = "1";

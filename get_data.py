@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import requests, json, os
 
 import influxdb_client

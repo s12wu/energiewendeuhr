@@ -14,9 +14,7 @@ Datenfluss:
 
  - Nginx+PHP, InfluxDB und dieser Python-Cronjob sind alle direkt auf einem Debian VPS (wer braucht schon Container!?)
 
-SMARD-Daten zu Sonne und Wind fehlen noch völlig
-
-![Rendering the classic_light template (SUN/WIND DATA IS WRONG)](img/classic_template.jpg)
+![Rendering the classic_light template (SUN/WIND DATA WAS STILL WRONG)](img/classic_template.jpg)
 
 ---
 
@@ -66,4 +64,5 @@ sudo apt install cron
 # systemctl enable und start
 crontab -e
 0 20 * * * /home/user/get_data.py
+5 20 * * * /home/user/smard.py
 ```
