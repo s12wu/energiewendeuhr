@@ -14,7 +14,11 @@ let CONFIG = {
   3 - gelb und höher
   4 - nur bei grün
   
-  0 - Modus Balkonkraftwerk: Dann einschalten, wenn in Waiblingen die Sonne scheint.
+  ! 0 - Modus Balkonkraftwerk: Dann einschalten, wenn in Waiblingen die Sonne scheint. wurde abgeschafft (6. August 2025), !
+  ! weil ich dazu bei mir zuhause die Helligkeit messen musste und es niemand benutzt hat.                                 !
+  ! An dieser Stelle wird jetzt eine 1 gesendet, wenn der aktuelle Erneuerbaren-Anteil mindestens Gelb (30%) ist.          !
+  ! So schaltet eine Steckdose immer noch grob passend an und aus, wenn sie auf BALKON gestellt ist, auch wenn ich keine   !
+  ! echten Messwerte mehr erhebe.                                                                                          !
   */
   min_color: 3
 };
